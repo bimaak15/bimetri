@@ -9,18 +9,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="font-zelda">
     <header class="z-[60] sticky top-0">
-        <nav class="relative z-[60] flex items-center justify-between backdrop-blur-md bg-opacity-40">
+        <nav
+            class="relative z-[60] flex items-center justify-between backdrop-blur-md bg-opacity-40 px-[90px] h-[90px]">
             <div class="flex flex-row items-center gap-[60px]">
                 <img class="h-14 w-auto" src="assets/navbar-logo.svg" alt="Home">
 
                 <ul class="flex flex-row gap-[64px] text-white text-[2rem]">
                     <a class="hover:underline hover:text-[#F3B641]" href="#hero">Home</a>
-                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">About Me</a>
-                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">My Skills</a>
-                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">Eperiences</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#about-me">About Me</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#myskills">My Skills</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#Experience">My Experiences</a>
                 </ul>
+            </div>
+
+            <div class="flex flex-row items-center gap-3">
+                <div class="flex flex-row items-center gap-[15px]">
+                    <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
+                        href="https://x.com/HMSI_ITS"><img class="h-11 w-11" src="assets/x-logo.svg" alt="X"></a>
+                    <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
+                        href="https://www.tiktok.com/@hmsiits"><img class="h-11 w-11" src="assets/tiktok-logo.svg"
+                            alt="Tiktok"></a>
+                    <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
+                        href="https://instagram.com/HMSI_ITS"><img class="h-11 w-11" src="assets/ig-logo.svg"
+                            alt="Instagram"></a>
+                    <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
+                        href="https://www.youtube.com/@layarHMSI"><img class="h-11 w-11" src="assets/yt-logo.svg"
+                            alt="Youtube"></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -70,6 +87,24 @@
 
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer
+        class="w-full h-[600px] bg-[url('assets/bg-footer.png')] bg-cover bg-center px-[90px] py-[88px] border-t-[20px] border-t-[#7A3D21] flex justify-center items-center">
+        <!-- Parent -->
+        <div
+            class="flex flex-col w-full h-full bg-[url('assets/frame-footer-desktop.png')] bg-center bg-contain bg-no-repeat px-[20px] py-10 items-center justify-center">
+            <div class="flex flex-row items-center justify-center gap-6"> <!-- Navbar Parent -->
+                <a href="#hero" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">Home</a>
+                <a href="#about-me" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">About Me</a>
+                <a href="#myskills" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">My Skills</a>
+                <a href="#Experience" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">My Experiences</a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="font-times font-bold text-[#F9DCB4]">&copy; SIMETRI HMSI ITS 2026</p>
+        </div>
+    </footer>
 </body>
 
 </html>
