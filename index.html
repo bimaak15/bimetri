@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simetri Day 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="z-[60] sticky top-0">
+        <nav class="relative z-[60] flex items-center justify-between backdrop-blur-md bg-opacity-40">
+            <div class="flex flex-row items-center gap-[60px]">
+                <img class="h-14 w-auto" src="assets/navbar-logo.svg" alt="Home">
+
+                <ul class="flex flex-row gap-[64px] text-white text-[2rem]">
+                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">Home</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">About Me</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">My Skills</a>
+                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">Eperiences</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-black text-white">
+        <!-- Section 1 - Hero -->
+        <section id="hero" class="bg-[red] text-center py-[100px]">
+            <h1 class="font-zelda text-center text-[128px]">My Portofolio</h1>
+            <p class="px-[100px] text-[32px]">Bima Satria Putra</p>
+        </section>
+
+        <!-- Section 2 - About me -->
+        <section id="about-me">
+            <h2 class="font-zelda text-center text-[80px]">About me</h2>
+            <p class="px-[100px] text-center text-[32px]">Halo! Nama aku Bima, aku siswa dari SMK Negeri 1 Surabaya
+                jurusan Rekayasa
+                Perangkat Lunak. Hobi ku
+                adalah ngoding, bermain game, dan belajar.</p>
+        </section>
+
+        <!-- Section 3 - My Skills -->
+        <section id="myskills" class="text-left w-[600px] mx-auto p-[60px]">
+            <h2 class="font-zelda text-center text-[80px]">My Skills</h2>
+
+            <div>
+                <h3 class="text-[48px] text-[#7a3d21]">Aku tertarik dengan AI, Software
+                    Engineering, dan
+                    Teknologi</h3>
+
+                <ul class="text-[32px] list-inside list-disc">
+                    <li>Laravel</li>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                    <li>Cinta Claude</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section 4 - My Experience -->
+        <section id="Experience" class="py-[100px]">
+            <div>
+                <h2 class="font-zelda text-[128px] text-white text-shadow-[0_5px_0_#7A321D21] text-center">My
+                    Experiences</h2>
+                <img src="assets/foto1.png" alt="">
+                <img src="assets/foto2.png" alt="">
+                <img src="assets/foto3.png" alt="">
+                <img src="assets/foto4.png" alt="">
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
