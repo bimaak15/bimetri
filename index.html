@@ -90,19 +90,25 @@
 
     <!-- Footer -->
     <footer
-        class="w-full h-[600px] bg-[url('assets/bg-footer.png')] bg-cover bg-center px-[90px] py-[88px] border-t-[20px] border-t-[#7A3D21] flex justify-center items-center">
+        class="w-full h-[600px] sm:h-[500px] md:h-[450px] lg:h-[600px] bg-[url('assets/bg-footer.png')] bg-cover bg-center px-4 py-8 lg:px-[90px] lg:border-t-[20px] lg:border-t-[#7A3D21] flex justify-center items-center">
         <!-- Parent -->
-        <div
-            class="flex flex-col w-full h-full bg-[url('assets/frame-footer-desktop.png')] bg-center bg-contain bg-no-repeat px-[20px] py-10 items-center justify-center">
-            <div class="flex flex-row items-center justify-center gap-6"> <!-- Navbar Parent -->
-                <a href="#hero" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">Home</a>
-                <a href="#about-me" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">About Me</a>
-                <a href="#myskills" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">My Skills</a>
-                <a href="#Experience" class="text-[#C07E4E] hover:text-[#F9DCB4] text-[32px]">My Experiences</a>
+        <div class="flex flex-col sm:w-full h-[440px] md:w-170 lg:w-full lg:h-full 
+            bg-[url('assets/frame-footer-mobile.png')]
+            md:bg-[url('assets/frame-footer-desktop.png')] 
+            bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] items-center justify-center">
+            <div class="flex lg:flex-row flex-col items-center justify-center gap-2 lg:gap-6"> <!-- Navbar Parent -->
+                <a href="#hero" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">Home</a>
+                <a href="#about-me" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">About
+                    Me</a>
+                <a href="#myskills" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">My
+                    Skills</a>
+                <a href="#Experience" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">My
+                    Experiences</a>
             </div>
 
             <!-- Copyright -->
-            <p class="font-times font-bold text-[#F9DCB4]">&copy; SIMETRI HMSI ITS 2026</p>
+            <p class="font-times font-bold text-[#F9DCB4] text-[15px] lg:text-[20px] mt-4">&copy; SIMETRI HMSI ITS 2026
+            </p>
         </div>
     </footer>
 </body>
