@@ -12,11 +12,11 @@
 <body class="font-zelda">
     <header class="z-[60] sticky top-0">
         <nav
-            class="relative z-[60] flex items-center justify-between backdrop-blur-md bg-opacity-40 px-[90px] h-[90px]">
-            <div class="flex flex-row items-center gap-[60px]">
-                <img class="h-14 w-auto" src="assets/navbar-logo.svg" alt="Home">
+            class="relative z-[60] flex items-center justify-between backdrop-blur-md bg-opacity-40 px-6 md:px-16 lg:px-[90px] h-[90px]">
+            <div class="flex flex-row items-center gap-16">
+                <img class="sm:h-12 lg:h-14 w-auto" src="assets/navbar-logo.svg" alt="Home">
 
-                <ul class="flex flex-row gap-[64px] text-white text-[2rem]">
+                <ul class="hidden lg:flex lg:flex-row gap-[64px] text-white text-[2rem]">
                     <a class="hover:underline hover:text-[#F3B641]" href="#hero">Home</a>
                     <a class="hover:underline hover:text-[#F3B641]" href="#about-me">About Me</a>
                     <a class="hover:underline hover:text-[#F3B641]" href="#myskills">My Skills</a>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="flex flex-row items-center gap-3">
-                <div class="flex flex-row items-center gap-[15px]">
+                <div class="hidden lg:flex lg:flex-row items-center gap-[15px]">
                     <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
                         href="https://x.com/HMSI_ITS"><img class="h-11 w-11" src="assets/x-logo.svg" alt="X"></a>
                     <a class="transition duration-200 ease-in-out hover:grayscale hover:opacity-70" target="_blank"
@@ -38,77 +38,190 @@
                         href="https://www.youtube.com/@layarHMSI"><img class="h-11 w-11" src="assets/yt-logo.svg"
                             alt="Youtube"></a>
                 </div>
+                <!-- button mobile -->
+                <button id="hamburgerBtn" class="flex lg:hidden items-center 
+                justify-center w-[48px] h-[48px] bg-[#4C1C0E] rounded-lg z-[60]">
+                    <img id="iconHamburger" src="./assets/menu.svg" alt="hamburger" class="h-[38.97px] w-[38.97px]">
+                    <img id="iconClose" src="./assets/exit.svg" alt="hamburger" class="h-[38.97px] w-[38.97px] hidden">
+                </button>
             </div>
         </nav>
+        <!-- screen sidebar -->
+        <div id="mobileMenu" class="lg:hidden backdrop-filter backdrop-blur-md bg-opacity-40
+            fixed inset-0 z-[50] translate-x-full transition-transform duration-250
+             ease-in-out">
+
+            <div class="h-[90px]"></div>
+
+            <ul class="flex flex-col items-center text-center py-6 text-white 
+                text-[2rem] ">
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F3B641]" href="#hero">Home</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F3B641]" href="#aboutme">About Me</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F3B641]" href="#myskills">My Skills</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F3B641]" href="#experience">My Experience</a>
+                </li>
+            </ul>
+        </div>
+        <script src="./js/mobileNav.js"></script>
     </header>
-    <main class="bg-black text-white">
-        <!-- Section 1 - Hero -->
-        <section id="hero" class="bg-[red] text-center py-[100px]">
-            <h1 class="font-zelda text-center text-[128px]">My Portofolio</h1>
-            <p class="px-[100px] text-[32px]">Bima Satria Putra</p>
+    <main class="relative text-white">
+        <div class="fixed inset-0 -z-20 bg-cover bg-center
+        bg-[url('/assets/fulgur-clans.png')]"></div>
+
+        <div id="bg-overlay" class="fixed inset-0 -z-10 bg-black opacity-0
+        pointer-events-none"></div>
+
+        <!-- Section 1 - Hero (bg-red nya hapus) -->
+        <section id="hero" class="w-full flex flex-col pt-[166px] md:pt-[270.5px] justify-center items-center gap-4">
+            <h1
+                class="uppercase text-[4rem] md:text-[6rem] lg:text-[8rem] text-white text-center [-webkit-text-stroke:1px_#7A3D21] lg:[-webkit-text-stroke:2px_#7A3D21] [text-shadow:0_5px_0_#7A3D21] lg:[text-shadow:0_10px_0_#7A3D21] leading-none">
+                My Portofolio</h1>
+            <div
+                class="flex min-w-[338px] lg:w-[700.39px] aspect-[341/43] items-center justify-center bg-[url(assets/paper-scroll-hero-mobile.svg)] lg:bg-[url(assets/paper-scroll-hero-desktop.svg)] bg-center bg-cover lg:bg-contain bg-no-repeat pb-1.5">
+                <p class="text-[#7A3D21] text-[1.7rem] md:text-[2rem] font-times font-bold">Bima Satria Putra</p>
+            </div>
+
+            <div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90">
+                <a href="#aboutme"
+                    class="px-[51px] py-[4px] md:px-[119.5px] md:py-[8px] bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)] rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px] drop-shadow-[0_8px_0_#592918]">
+                    <p class="uppercase text-white text-[1.3rem] md:text-[1.75rem] md:leading-none">EXPLORE MORE</p>
+                </a>
+            </div>
         </section>
 
         <!-- Section 2 - About me -->
-        <section id="about-me">
-            <h2 class="font-zelda text-center text-[80px]">About me</h2>
-            <p class="px-[100px] text-center text-[32px]">Halo! Nama aku Bima, aku siswa dari SMK Negeri 1 Surabaya
-                jurusan Rekayasa
-                Perangkat Lunak. Hobi ku
-                adalah ngoding, bermain game, dan belajar.</p>
+        <section id="aboutme" class="flex flex-col lg:flex-row
+        items-center justify-center gap-8 lg:gap-24 px-6 md:px-16 lg:px-[90px] mt-100
+        lg:mt-60">
+            <div class="order-1 lg:order-2 shrink-0">
+                <div class="relative w-[240px] md:w-[280px] lg:w-[340px] aspect-[700/1040]">
+                    <img src="assets/BIMA.png" alt="Kartu profil" class="absolute inset-0
+                    w-full h-full z-10 pointer-events-none" />
+                    <div class="absolute inset-0 z-20 rotate-[1deg]">
+                        <a href="#hero" class="absolute left-1/2 -translate-x-1/2 top-[83%] w-[50.7%] h-[8.4%] flex items-center justify-center
+                            bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)]
+                            rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px]
+                            drop-shadow-[0_3px_0_#592918] lg:drop-shadow-[0_5px_0_#592918]
+                            transition-all duration-100 hover:brightness-90">
+                            <p class="uppercase text-white text-[0.75rem] md:text-[0.85rem] lg:text-[1.1rem]
+                            leading-none whitespace-nowrap">Lihat Portfolio</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Teks -->
+            <div class="order-2 lg:order-1 flex flex-col gap-4 max-w-[560px] text-center lg:text-left">
+                <h2 class="uppercase text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] text-white
+                    [-webkit-text-stroke:1px_#7A3D21] lg:[-webkit-text-stroke:2px_#7A3D21]
+                    text-shadow-[0_5px_0_#7A3D21] lg:text-shadow-[0_10px_0_#7A3D21] leading-none">
+                    ABOUT ME</span>
+                </h2>
+
+                <p class="font-times text-[#F9DCB4] text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] leading-snug
+                    text-justify">
+                    Halo! Aku siswa dari SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak (RPL). Aku sangat
+                    tertarik dengan Web Development dan juga Mobile Development. Harapanku setelah mengikuti simetri
+                    adalah memahami semua materi yang ada dan menjadikan pengalaman yang berharga.
+                </p>
+            </div>
+
         </section>
 
         <!-- Section 3 - My Skills -->
-        <section id="myskills" class="text-left w-[600px] mx-auto p-[60px]">
-            <h2 class="font-zelda text-center text-[80px]">My Skills</h2>
+        <section id="myskills" class="flex justify-center mt-100">
 
-            <div>
-                <h3 class="text-[48px] text-[#7a3d21]">Aku tertarik dengan AI, Software
-                    Engineering, dan
-                    Teknologi</h3>
+            <div class="flex flex-col text-center gap-4">
+                <h1 class="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] text-white
+           [-webkit-text-stroke:1px_#7A3D21] lg:[-webkit-text-stroke:2px_#7A3D21]
+           text-shadow-[0_5px_0_#7A3D21] lg:text-shadow-[0_10px_0_#7A3D21] leading-none">
+                    MY SKILLS
+                </h1>
 
-                <ul class="text-[32px] list-inside list-disc">
-                    <li>Laravel</li>
-                    <li>PostgreSQL</li>
-                    <li>MySQL</li>
-                    <li>Cinta Claude</li>
-                </ul>
-            </div>
+                <div class="relative">
+                    <!-- Laptop dan tablet -->
+                    <img src="assets/wood plank.svg" alt="Papan kayu"
+                        class="hidden md:block lg:w-[769.08px] md:w-[500.17px]">
+
+                    <!-- Mobile -->
+                    <img src="assets/wood plank - mobile.svg" alt="Papan kayu" class="block md:hidden w-[25rem]">
+
+                    <div class="absolute inset-0 flex flex-col text-left px-15 pt-10 gap-1 text-[#592918]">
+                        <h1 class="text-[2.75rem] md:text-[2.5rem] lg:text-[3.75rem]">Aku tertarik dengan teknologi</h1>
+                        <ul class="font-times list-disc ml-8 text-[1rem] md:text-[1.5rem] lg:text-[2rem]">
+                            <li>NgodinK</li>
+                            <li>GaminK</li>
+                            <li><del>Pecut e ai</del></li>
+                        </ul>
+                        <div class="flex w-full justify-center items-center transition-all duration-100">
+                            <a href="#experience" class="absolute bottom-[40px] md:bottom-[25px] lg:bottom-[50px] px-8 pt-[8px] rounded-[8px]
+              bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)]
+              border-[1px] border-[#F3B641] outline-[1px] outline-[#592918]
+              drop-shadow-[0_5px_0_#592918] hover:brightness-90">
+                                <p class="text-white text-[2rem] md:text-[1.5rem] lg:text-[2.5rem] leading-none">My
+                                    Experience</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
         </section>
         <!-- Section 4 - My Experience -->
         <section id="Experience" class="py-[100px]">
-            <div>
-                <h2 class="font-zelda text-[128px] text-white text-shadow-[0_5px_0_#7A321D21] text-center">My
-                    Experiences</h2>
-                <img src="assets/foto1.png" alt="">
-                <img src="assets/foto2.png" alt="">
-                <img src="assets/foto3.png" alt="">
-                <img src="assets/foto4.png" alt="">
+            <div class="flex flex-col gap-[1rem] items-center">
+                <h2 class="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] text-white
+                [-webkit-text-stroke:1px_#7A3D21] lg:[-webkit-text-stroke:2px_#7A3D21]
+                text-shadow-[0_5px_0_#7A3D21] text-center">MY EXPERIENCE</h2>
+
+                <div class="flex flex-col md:flex-row gap-[1rem]">
+                    <img class="w-[22.5rem] lg:w-[25rem]" src="assets/foto1.png" alt="">
+                    <img class="w-[22.5rem] lg:w-[25rem]" src="assets/foto2.png" alt="">
+                </div>
+                <div class="flex flex-col md:flex-row gap-[1rem]">
+                    <img class="w-[22.5rem] lg:w-[25rem]" src="assets/foto3.png" alt="">
+                    <img class="w-[22.5rem] lg:w-[25rem]" src="assets/foto4.png" alt="">
+                </div>
             </div>
 
         </section>
+        <script src="./js/bgScrollEffect.js"></script>
     </main>
 
     <!-- Footer -->
-    <footer
-        class="w-full h-[600px] sm:h-[500px] md:h-[450px] lg:h-[600px] bg-[url('assets/bg-footer.png')] bg-cover bg-center px-4 py-8 lg:px-[90px] lg:border-t-[20px] lg:border-t-[#7A3D21] flex justify-center items-center">
-        <!-- Parent -->
-        <div class="flex flex-col sm:w-full h-[440px] md:w-170 lg:w-full lg:h-full 
+    <footer class="w-full h-[500px] md:h-[350px] lg:h-[600px] 
+        bg-[url('assets/bg-footer.png')] bg-cover bg-center px-4 py-8 lg:px-[90px] 
+        lg:py-[88px] lg:border-t-[20px] lg:border-t-[#7A3D21] flex justify-center items-center">
+
+        <!-- FRAME Parent -->
+        <div class="flex flex-col w-full h-[440px] md:w-170 lg:w-[1000px] md:h-full lg:h-full
             bg-[url('assets/frame-footer-mobile.png')]
-            md:bg-[url('assets/frame-footer-desktop.png')] 
-            bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] items-center justify-center">
-            <div class="flex lg:flex-row flex-col items-center justify-center gap-2 lg:gap-6"> <!-- Navbar Parent -->
-                <a href="#hero" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">Home</a>
-                <a href="#about-me" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">About
-                    Me</a>
-                <a href="#myskills" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">My
+            md:bg-[url('assets/frame-footer-desktop.png')]
+            lg:bg-[url('assets/frame-footer-desktop.png')]
+            bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] lg:py-10 items-center justify-center">
+            <!-- NAVBAR -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-2 lg:gap-6">
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#hero">Home</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#aboutme">About me</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#myskills">My
                     Skills</a>
-                <a href="#Experience" class="text-[#C07E4E] hover:text-[#F9DCB4] lg:text-[32px] text-[1.5rem]">My
-                    Experiences</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#experience">My
+                    Experience</a>
             </div>
 
             <!-- Copyright -->
-            <p class="font-times font-bold text-[#F9DCB4] text-[15px] lg:text-[20px] mt-4">&copy; SIMETRI HMSI ITS 2026
-            </p>
+            <p class="font-times font-bold text-[#F9DCB4] text-[15px] lg:text-[20px] mt-4">&copy; SIMETRI HMSI ITS</p>
         </div>
     </footer>
 </body>
